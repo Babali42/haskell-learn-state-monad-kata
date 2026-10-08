@@ -54,3 +54,7 @@ Then
 ### Cabal Cabal
 
 `cabal test`
+
+## Solution
+
+A beginning solution can be found in the **solution-on-8th-october** branch
