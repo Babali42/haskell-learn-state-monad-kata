@@ -14,6 +14,10 @@ fightMonster :: State GameState ()
 fightMonster = do
   modify (\s -> s { health = health s - 10 })
 
+earnSomeMoney :: State GameState ()
+earnSomeMoney = do
+  modify (\s -> s { gold = gold s + 10 })  
+
 main :: IO ()
 main = hspec $ do
   describe "Dungeon game" $ do
@@ -22,3 +26,9 @@ main = hspec $ do
           result  = execState fightMonster initial
 
       health result `shouldBe` 90
+
+    it "earnSomeMoney gain 10 money" $ do
+      let initial = GameState 100 0 []
+          result  = execState earnSomeMoney initial
+
+      gold result `shouldBe` 10
