@@ -1,10 +1,4 @@
-# Idées de katas pour apprendre la state monad
-
-## Article sur la state monade
-https://hugopeters.me/posts/3/
-
-## A band account simulation 
-https://medium.com/@Gryff/bank-kata-in-haskell-dealing-with-state-3364c13b994f
+# A code kata to learn Haskell state monad
 
 ## A tiny dungeon game
   
@@ -40,10 +34,15 @@ By the end of the kata, you should be comfortable using:
 
 Goal: make all tests pass while keeping the implementation as simple as possible and learning the State Monad through TDD.
 
+## Article sur la state monade
+https://hugopeters.me/posts/3/
+
+## A band account simulation 
+https://medium.com/@Gryff/bank-kata-in-haskell-dealing-with-state-3364c13b994f
 
 ## Notes :
 
-As I Use monad :
+As I Use docker :
 
 `ghc -package mtl -package hspec dungeonSpec.hs
 ./dungeonSpec`
