@@ -40,9 +40,9 @@ https://hugopeters.me/posts/3/
 ## A band account simulation 
 https://medium.com/@Gryff/bank-kata-in-haskell-dealing-with-state-3364c13b994f
 
-## Notes :
+## How to run tests :
 
-As I Use docker :
+### Docker :
 
 `ghc -package mtl -package hspec dungeonSpec.hs
 ./dungeonSpec`
@@ -50,3 +50,7 @@ As I Use docker :
 Then
 
 `./dungeonSpec`
+
+### Cabal Cabal
+
+`cabal test`
