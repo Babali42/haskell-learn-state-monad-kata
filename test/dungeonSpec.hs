@@ -1,7 +1,7 @@
 import Test.Hspec
 import Control.Monad.State
 
-data Item = Potion
+data Item = Item
   deriving (Eq, Show)
 
 data GameState = GameState
@@ -14,9 +14,14 @@ fightMonster :: State GameState ()
 fightMonster = do
   modify (\s -> s { health = health s - 10 })
 
-earnSomeMoney :: State GameState ()
-earnSomeMoney = do
-  modify (\s -> s { gold = gold s + 10 })  
+findTreasure :: State GameState ()
+findTreasure = do
+  modify (\s -> s { gold = gold s + 100 })
+
+pickUpPotion :: State GameState ()
+pickUpPotion = do
+  let potion = Item
+  modify (\s -> s { inventory = inventory s ++ [potion] })  
 
 main :: IO ()
 main = hspec $ do
@@ -27,8 +32,15 @@ main = hspec $ do
 
       health result `shouldBe` 90
 
-    it "earnSomeMoney gain 10 money" $ do
+    it "findTreasure add 100 money" $ do
       let initial = GameState 100 0 []
-          result  = execState earnSomeMoney initial
+          result  = execState findTreasure initial
 
-      gold result `shouldBe` 10
+      gold result `shouldBe` 100
+
+    it "pick up a potion add item to the inventory" $ do
+      let initial = GameState 100 0 []
+          item = Item
+          result = execState pickUpPotion initial
+
+      inventory result `shouldBe` [item]
