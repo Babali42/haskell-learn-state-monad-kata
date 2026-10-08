@@ -1,5 +1,8 @@
 # Idées de katas pour apprendre la state monad
 
+## Article sur la state monade
+https://hugopeters.me/posts/3/
+
 ## A band account simulation 
 https://medium.com/@Gryff/bank-kata-in-haskell-dealing-with-state-3364c13b994f
 
