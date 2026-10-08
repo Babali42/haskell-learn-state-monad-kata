@@ -1,9 +1,5 @@
-# A code kata to learn Haskell state monad
-
-## A tiny dungeon game
+# A code kata to learn Haskell state monad - a tiny dungeon game
   
-Haskell State Monad Kata: Dungeon Explorer
-
 You are building a tiny dungeon game.
 
 The game state contains:
@@ -34,15 +30,9 @@ By the end of the kata, you should be comfortable using:
 
 Goal: make all tests pass while keeping the implementation as simple as possible and learning the State Monad through TDD.
 
-## Article sur la state monade
-https://hugopeters.me/posts/3/
+## How to run tests
 
-## A band account simulation 
-https://medium.com/@Gryff/bank-kata-in-haskell-dealing-with-state-3364c13b994f
-
-## How to run tests :
-
-### Docker :
+### Docker
 
 `ghc -package mtl -package hspec dungeonSpec.hs
 ./dungeonSpec`
@@ -51,10 +41,18 @@ Then
 
 `./dungeonSpec`
 
-### Cabal Cabal
+### Cabal
 
 `cabal test`
 
 ## Solution
 
 A beginning solution can be found in the **solution-on-8th-october** branch
+
+### Misc
+
+#### State monade
+https://hugopeters.me/posts/3/
+
+#### A band account simulation 
+https://medium.com/@Gryff/bank-kata-in-haskell-dealing-with-state-3364c13b994f
